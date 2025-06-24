@@ -1,3 +1,28 @@
+:root {
+    --primary: #2C3E50; /* اللون الأساسي الجديد - أزرق غامق */
+    --secondary: #E74C3C; /* اللون الثانوي الجديد - أحمر */
+    --light: #ECF0F1; /* اللون الفاتح */
+    --dark: #2C3E50; /* اللون الغامق */
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #1A252F;
+    border-color: #1A252F;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
