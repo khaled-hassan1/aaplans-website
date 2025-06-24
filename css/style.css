@@ -1,26 +1,31 @@
 :root {
-    --primary: #2C3E50; /* اللون الأساسي الجديد - أزرق غامق */
-    --secondary: #E74C3C; /* اللون الثانوي الجديد - أحمر */
-    --light: #ECF0F1; /* اللون الفاتح */
-    --dark: #2C3E50; /* اللون الغامق */
-}
+    --bs-primary: #00bbf0;
+    /* Your vibrant sky blue - great for CTAs, highlights */
+    --bs-secondary: #00B4D8;
+    /* A modern, neutral grey - good for text, subtle elements */
+    --bs-success: #27ae60;
+    /* A refreshing green - for success messages, positive actions */
+    --bs-info: #0096c7;
+    /* A slightly darker blue from your palette - for info, links */
+    --bs-warning: #f39c12;
+    /* An earthy orange/yellow - for warnings, alerts */
+    --bs-danger: #e74c3c;
+    /* A clear red - for errors, destructive actions */
+    --bs-light: #ecf0f1;
+    /* A very light, almost off-white - for backgrounds */
+    --bs-dark: #2c3e50;
+    /* A deep, dark blue-grey - for strong text, dark sections */
+    --bs-white: #ffffff;
+    /* Pure white */
 
-.btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-}
+    /* Your specific blue gradients/tones for additional use */
+    --digital-blue-darkest: #03045E;
+    --digital-blue-deep: #023E8A;
+    --digital-blue-medium: #0077B6;
+    --digital-blue-light: #00B4D8;
+    --digital-blue-sky: #48CAE4;
+    --digital-blue-lightest: #90E0EF;
 
-.btn-primary:hover {
-    background-color: #1A252F;
-    border-color: #1A252F;
-}
-
-.text-primary {
-    color: var(--primary) !important;
-}
-
-.bg-primary {
-    background-color: var(--primary) !important;
 }
 
 /*** Spinner Start ***/
@@ -37,6 +42,7 @@
     visibility: visible;
     opacity: 1;
 }
+
 /*** Spinner End ***/
 
 .back-to-top {
@@ -95,6 +101,21 @@
     color: var(--bs-white) !important;
     font-weight: 400;
     transition: 0.5s;
+    border-color: #0077B6;
+}
+
+a {
+    color: var(--digital-blue-sky);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ADE8F4;
+    text-decoration: none;
+}
+
+.text-secondary {
+    color: var(--bs-secondary) !important;
 }
 
 .btn.btn-primary:hover {
@@ -126,17 +147,36 @@
 }
 
 @keyframes RotateMoveLeft {
-    0%   {left: 0px;}
-    50%   {left: 40px;}
-    100%  {left: 0px;}
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 40px;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
 @keyframes RotateMoveRight {
-    0%   {right: 0px;}
-    50%   {right: 40px;}
-    100%  {right: 0px;}
+    0% {
+        right: 0px;
+    }
+
+    50% {
+        right: 40px;
+    }
+
+    100% {
+        right: 0px;
+    }
 }
 
+.text-primary {
+    color: var(--bs-primary) !important;
+}
 
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
@@ -277,12 +317,13 @@
         background: transparent !important;
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: var(--bs-light) !important;
     }
 }
+
 /*** Navbar End ***/
 
 /*** Single Page Hero Header Start ***/
@@ -323,15 +364,27 @@
         -webkit-transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
         transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
     }
-      100% {
+
+    100% {
         -webkit-transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
         transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
     }
 
-    0% {bottom: 0px;}
-    50%   {left: -10px;}
-    75%   {bottom: 10%;}
-    100%  {bottom: 0px;}
+    0% {
+        bottom: 0px;
+    }
+
+    50% {
+        left: -10px;
+    }
+
+    75% {
+        bottom: 10%;
+    }
+
+    100% {
+        bottom: 0px;
+    }
 }
 
 .bg-breadcrumb::before {
@@ -353,14 +406,23 @@
         -webkit-transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
         transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
     }
-      100% {
+
+    100% {
         -webkit-transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
         transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
     }
 
-    0% {top: 0px;}
-    50%   {top: 10%;}
-    100%  {top: 0px;}
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 10%;
+    }
+
+    100% {
+        top: 0px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -392,7 +454,7 @@
     background: rgba(102, 16, 242, 0.07);
     animation: animate 25s linear infinite;
     bottom: -150px;
-    
+
 }
 
 .breadcrumb-animation li:nth-child(1) {
@@ -473,19 +535,20 @@
 
 @keyframes animate {
 
-    0%{
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
     }
 
 }
+
 /*** Single Page Hero Header End ***/
 
 
@@ -504,9 +567,17 @@
 }
 
 @keyframes bgMove {
-    0%   {right: 0px;}
-    50%   {right: 20px;}
-    100%  {right: 0px;}
+    0% {
+        right: 0px;
+    }
+
+    50% {
+        right: 20px;
+    }
+
+    100% {
+        right: 0px;
+    }
 }
 
 .header::before {
@@ -529,16 +600,28 @@
         -webkit-transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
         transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
     }
-      100% {
+
+    100% {
         -webkit-transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
         transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
     }
 
 
-    0% {bottom: 0px;}
-    50%   {left: -10px;}
-    75%   {bottom: 9%;}
-    100%  {bottom: 0px;}
+    0% {
+        bottom: 0px;
+    }
+
+    50% {
+        left: -10px;
+    }
+
+    75% {
+        bottom: 9%;
+    }
+
+    100% {
+        bottom: 0px;
+    }
 }
 
 .hero-header {
@@ -558,17 +641,37 @@
     animation: RotateMoveSty-3 45s linear infinite;
     transition: 0.5s;
     z-index: -1;
-    
+
 }
 
 @keyframes RotateMoveSty-3 {
-    0%   {left: 100px;}
-    40%   {bottom: -0px;}
-    50%   {left: 700px;}
-    70%   {bottom: 500px;}
-    80%   {left: 400px;}
-    95%   {bottom: -0px;}
-    100%  {left: 100px;}
+    0% {
+        left: 100px;
+    }
+
+    40% {
+        bottom: -0px;
+    }
+
+    50% {
+        left: 700px;
+    }
+
+    70% {
+        bottom: 500px;
+    }
+
+    80% {
+        left: 400px;
+    }
+
+    95% {
+        bottom: -0px;
+    }
+
+    100% {
+        left: 100px;
+    }
 }
 
 .hero-header::before {
@@ -584,17 +687,37 @@
     animation: RotateMoveSty-4 45s linear infinite;
     transition: 0.5s;
     z-index: -1;
-    
+
 }
 
 @keyframes RotateMoveSty-4 {
-    0%   {left: 100px;}
-    40%   {bottom: -0px;}
-    50%   {left: 700px;}
-    70%   {bottom: 500px;}
-    80%   {left: 400px;}
-    95%   {bottom: -0px;}
-    100%  {left: 100px;}
+    0% {
+        left: 100px;
+    }
+
+    40% {
+        bottom: -0px;
+    }
+
+    50% {
+        left: 700px;
+    }
+
+    70% {
+        bottom: 500px;
+    }
+
+    80% {
+        left: 400px;
+    }
+
+    95% {
+        bottom: -0px;
+    }
+
+    100% {
+        left: 100px;
+    }
 }
 
 
@@ -619,13 +742,33 @@
 }
 
 @keyframes RotateMoveSty-2 {
-    0%   {left: 0px;}
-    40%   {top: -30px;}
-    50%   {left: 500px;}
-    70%   {top: 200px;}
-    80%   {left: 100px;}
-    95%   {top: -30px;}
-    100%  {left: 0px;}
+    0% {
+        left: 0px;
+    }
+
+    40% {
+        top: -30px;
+    }
+
+    50% {
+        left: 500px;
+    }
+
+    70% {
+        top: 200px;
+    }
+
+    80% {
+        left: 100px;
+    }
+
+    95% {
+        top: -30px;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
 .hero-header .rotate-img img {
@@ -635,23 +778,32 @@
 }
 
 @keyframes RotateMove {
-    0%   {left: 0px;}
-    50%   {left: 200px;}
-    100%  {left: 0px;}
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 200px;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
 
 @media (max-width: 992px) {
     .hero-header {
         padding-top: 280px;
-        
+
     }
 
     .hero-header .rotate-img img {
         margin-top: 100px;
     }
-   
+
 }
+
 /*** Hero Header End ***/
 
 
@@ -667,8 +819,8 @@
 }
 
 .service .service-item:hover {
-    background: rgba(102, 16, 242, 0.09);
-    border: 1px ;
+    background: rgba(72, 202, 228, 0.164);
+    border: 1px;
 }
 
 
@@ -690,8 +842,12 @@
     background: var(--bs-light);
     border-radius: 58% 42% 21% 79% / 30% 29% 71% 70%;
 }
+
 /*** Features End ***/
 
+.bg-primary {
+    background: var(--bs-primary) !important;
+}
 
 /*** Pricing Start ***/
 .price .price-item {
@@ -719,6 +875,7 @@
     justify-content: center;
     padding-bottom: 10px;
 }
+
 /*** Pricing End ***/
 
 
@@ -767,6 +924,7 @@
 .blog .blog-item .blog-img:hover img {
     transform: scale(1.3);
 }
+
 /*** Blog End ***/
 
 
@@ -777,6 +935,7 @@
     overflow: hidden;
     z-index: 1;
 }
+
 .testimonial::after {
     content: "";
     position: absolute;
@@ -806,19 +965,47 @@
 }
 
 @keyframes TestimonialMoveLeft {
-    0%   {left: 0px;}
-    25%   {top: 100px;}
-    50%   {left: 100%;}
-    75%   {top: 80%;}
-    100%  {left: 0px;}
+    0% {
+        left: 0px;
+    }
+
+    25% {
+        top: 100px;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    75% {
+        top: 80%;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
 @keyframes TestimonialMoveRight {
-    0%   {right: 0px;}
-    25%   {top: 100px;}
-    50%   {right: 100%;}
-    75%   {top: 80%;}
-    100%  {right: 0px;}
+    0% {
+        right: 0px;
+    }
+
+    25% {
+        top: 100px;
+    }
+
+    50% {
+        right: 100%;
+    }
+
+    75% {
+        top: 80%;
+    }
+
+    100% {
+        right: 0px;
+    }
 }
 
 .testimonial .testimonial-carousel.owl-carousel {
@@ -913,6 +1100,7 @@
         margin-right: -15px;
     }
 }
+
 /*** Testimonial End ***/
 
 /*** Contact Start ***/
@@ -938,11 +1126,25 @@
 }
 
 @keyframes ContactMoveLeft {
-    0%   {left: 0px;}
-    25%   {top: 100px;}
-    50%   {left: 90%;}
-    75%   {top: 80%;}
-    100%  {left: 0px;}
+    0% {
+        left: 0px;
+    }
+
+    25% {
+        top: 100px;
+    }
+
+    50% {
+        left: 90%;
+    }
+
+    75% {
+        top: 80%;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
 .contact::before {
@@ -960,26 +1162,47 @@
 }
 
 @keyframes ContactMoveRight {
-    0%   {right: 0px;}
-    25%   {top: 100px;}
-    50%   {right: 90%;}
-    75%   {top: 80%;}
-    100%  {right: 0px;}
+    0% {
+        right: 0px;
+    }
+
+    25% {
+        top: 100px;
+    }
+
+    50% {
+        right: 90%;
+    }
+
+    75% {
+        top: 80%;
+    }
+
+    100% {
+        right: 0px;
+    }
 }
+
 /*** Contact End ***/
 
 
 /*** Footer Start ***/
 .footer {
-    background: linear-gradient(rgba(102, 16, 242, 0.05), rgba(102, 16, 242, 0.05));
+    background: #03045E !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 50px;
 }
+
 .footer .footer-item a {
     line-height: 35px;
-    color: var(--bs-dark);
+    color: var(--bs-white);
     transition: 0.5s;
+}
+
+.text-dark-footer  {
+    color: var(--bs-white) !important;
 }
 
 .footer .footer-item p {
@@ -998,4 +1221,5 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     background: var(--bs-dark) !important;
 }
+
 /*** copyright end ***/
