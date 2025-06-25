@@ -1201,7 +1201,7 @@ a:hover {
     transition: 0.5s;
 }
 
-.text-dark-footer  {
+.text-dark-footer {
     color: var(--bs-white) !important;
 }
 
@@ -1223,3 +1223,17 @@ a:hover {
 }
 
 /*** copyright end ***/
+
+/*** Back to top ***/
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
+    color: var(--bs-white) !important;
+    /* Ensures text color remains white or your primary button's text color */
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    /* Adjust box-shadow to use your primary color variable for consistency */
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), 0.397) !important;
+    /* Uses RGB components of primary color */
+    /* Fallback if --bs-primary-rgb is not defined, or if you prefer a hardcoded value: */
+    /* box-shadow: 0 0 0 .25rem rgba(83, 60, 210, 0.397); */
+}
