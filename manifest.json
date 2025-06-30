@@ -1,11 +1,11 @@
 {
-    "id": "/",
+    "id": "/?appId=3f1f45e3-9e46-4d60-b329-8e4a3caf2c5f",
     "name": "AAPLans",
     "short_name": "AAPLans",
     "description": "نحن نقدم حلولاً رقمية متكاملة في التسويق الرقمي، البرمجة، وتصميم الجرافيك. نساعد أعمالك على النمو في العالم الرقمي بحلول مبتكرة.",
     "display": "standalone",
-    "start_url": "/index.html",
-    "scope": "/",
+    "start_url": "/aaplans-website/",
+    "scope": "/aaplans-website/",
     "orientation": "portrait",
     "icons": [
         {
