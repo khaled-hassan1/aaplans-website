@@ -28,7 +28,7 @@ AAPlans is a technology company specializing in programming, design, and digital
 
 - **Email**: info@aaplans.com
 - **Phone**: +966-59-308-2234
-- **Website**: [aaplans.com](https://aaplans.com)
+- **Website**: [aaplans.com](https://khaled-hassan1.github.io/aaplans-website)
 
 ---
 
@@ -62,7 +62,7 @@ AAPlans مؤسسة متخصصة في التقنية، البرمجة، التص�
 
 - **البريد الإلكتروني**: info@aaplans.com
 - **الهاتف**: +966-59-308-2234
-- **الموقع**: [aaplans.com](https://aaplans.com)
+- **الموقع**: [aaplans.com](https://khaled-hassan1.github.io/aaplans-website)
 
 ## وسائل التواصل الاجتماعي
 
