@@ -3,14 +3,6 @@
     /* Your vibrant sky blue - great for CTAs, highlights */
     --bs-secondary: #00B4D8;
     /* A modern, neutral grey - good for text, subtle elements */
-    --bs-success: #27ae60;
-    /* A refreshing green - for success messages, positive actions */
-    --bs-info: #0096c7;
-    /* A slightly darker blue from your palette - for info, links */
-    --bs-warning: #f39c12;
-    /* An earthy orange/yellow - for warnings, alerts */
-    --bs-danger: #e74c3c;
-    /* A clear red - for errors, destructive actions */
     --bs-light: #ecf0f1;
     /* A very light, almost off-white - for backgrounds */
     --bs-dark: #2c3e50;
@@ -26,6 +18,17 @@
     --digital-blue-sky: #48CAE4;
     --digital-blue-lightest: #90E0EF;
 
+}
+
+::selection {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.ltr-number {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*** Spinner Start ***/
@@ -330,7 +333,7 @@ a:hover {
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(102, 16, 242, 0.05), rgba(102, 16, 242, 0.05));
+    background: linear-gradient(rgba(16, 159, 242, 0.041), rgba(16, 159, 242, 0.096));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -347,7 +350,7 @@ a:hover {
     width: 600px;
     height: 600px;
     border-radius: 300px;
-    border: 80px solid rgba(247, 71, 128, 0.05);
+    border: 80px solid rgba(0, 187, 240, 0.05);
     background: transparent;
     animation: RotateMoveSingle 5s linear infinite;
     z-index: -1;
@@ -395,7 +398,7 @@ a:hover {
     width: 600px;
     height: 600px;
     border-radius: 300px;
-    border: 80px solid rgba(247, 71, 128, 0.04);
+    border: 80px solid rgba(0, 187, 240, 0.05);
     background: transparent;
     animation: RotateMoveSingle 5s linear infinite;
     z-index: -1;
@@ -451,7 +454,7 @@ a:hover {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(102, 16, 242, 0.07);
+    background: rgba(0, 187, 240, 0.07);
     animation: animate 25s linear infinite;
     bottom: -150px;
 
@@ -1119,7 +1122,7 @@ a:hover {
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    border: 60px solid rgba(102, 16, 242, 0.05);
+    border: 60px solid rgba(0, 187, 240, 0.05);
     background: transparent;
     animation: ContactMoveLeft 50s linear infinite;
     z-index: 1;
@@ -1155,7 +1158,7 @@ a:hover {
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    border: 60px solid rgba(102, 16, 242, 0.05);
+    border: 60px solid rgba(0, 187, 240, 0.05);
     background: transparent;
     animation: ContactMoveRight 50s linear infinite;
     z-index: 1;
@@ -1206,7 +1209,7 @@ a:hover {
 }
 
 .footer .footer-item p {
-    line-height: 35px;
+    line-height: 31px;
 }
 
 .footer .footer-item a:hover {
@@ -1236,4 +1239,27 @@ a:hover {
     /* Uses RGB components of primary color */
     /* Fallback if --bs-primary-rgb is not defined, or if you prefer a hardcoded value: */
     /* box-shadow: 0 0 0 .25rem rgba(83, 60, 210, 0.397); */
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    /* لون النص أبيض عند التمرير */
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* لتغيير لون النص الأساسي */
+.text-primary {
+    color: var(--bs-primary) !important;
+    /* !important لضمان التجاوز */
+}
+
+/* لتغيير لون الروابط الأساسية */
+a.text-primary {
+    color: var(--bs-primary) !important;
 }
