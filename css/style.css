@@ -1286,3 +1286,40 @@ a.text-primary {
     font-size: 24px;
     margin-bottom: 15px;
 }
+
+
+/* Custom styling for the active portfolio tab button */
+/* This ensures the active button background and text use Bootstrap's primary,
+   and adds the custom shadow for a "glowing" effect. */
+.portfolio-tabs .nav-item .btn.active {
+    /* Bootstrap's default .btn-primary takes care of background and text color for active state */
+    /* If you want a specific shadow color, use rgba with the custom variable's RGB values */
+    box-shadow: 0 0 0 .25rem rgba(2, 38, 241, 0.856) !important; /* Uses --digital-blue-deep (RGB: 2, 62, 138) with opacity */
+    border-color: var(--bs-primary) !important; /* Ensure border color matches primary */
+    color: var(--bs-white) !important; /* Ensure text color is white on active */
+    background-color: var(--bs-primary) !important; /* Ensure background color is primary */
+}
+
+/* Optional: Style for the non-active outline buttons when hovered */
+.portfolio-tabs .nav-item .btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    border-color: var(--bs-primary);
+}
+
+/* Styling for the h6 elements inside the buttons to keep them centered and visible */
+.portfolio-tabs .nav-item .btn h6 {
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.portfolio-tabs .nav-item .btn.active h6 {
+    color: var(--bs-white); /* Ensure h6 text is white when active */
+}
+
+.portfolio-tabs .nav-item .btn-outline-primary:not(.active) h6 {
+    color: var(--bs-primary); /* Default color for non-active outline tabs */
+}
+
+.portfolio-tabs .nav-item .btn-outline-primary:not(.active):hover h6 {
+    color: var(--bs-white); /* Text color on hover for non-active tabs */
+}
